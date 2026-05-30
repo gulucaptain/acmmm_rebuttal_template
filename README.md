@@ -24,7 +24,7 @@
 This repository provides a compact ACM-style rebuttal template [Non-official] based on the `acmart` class, including ACM MM Conference. After you compile the Latex template in this repo., you will get:
 
 <p align="center">
-  <img src="assets/example.png" width="50%"/>
+  <img src="assets/example.jpg" width="100%"/>
 </p>
 
 The template keeps the original ACM two-column review layout while moving the paper title and submission ID into the page header, leaving more space for rebuttal content.

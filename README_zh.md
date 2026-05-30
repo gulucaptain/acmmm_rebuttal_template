@@ -24,7 +24,7 @@
 本仓库提供了一个基于 `acmart` 类的 ACM 风格 rebuttal 模板 [非官方]，用于包括ACM MM会议的Rebuttal。编译后效果：
 
 <p align="center">
-  <img src="assets/example.png" width="50%"/>
+  <img src="assets/example.jpg" width="100%"/>
 </p>
 
 该模板保留原始 ACM 双栏 review 格式，同时将论文标题和投稿编号移动到页眉中，从而节省正文空间，便于在严格页数限制下撰写 rebuttal。

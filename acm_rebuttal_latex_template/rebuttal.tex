@@ -1,0 +1,121 @@
+\documentclass[sigconf,screen,review,anonymous]{acmart}
+
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+% \pagestyle{plain}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{bbding}
+
+% ---------- Reviewer aliases ----------
+% Mapping:
+% Reviewer 1 = R#aaaa
+% Reviewer 2 = R#bbbb
+% Reviewer 3 = R#cccc
+% Reviewer 4 = R#dddd
+% Reviewer 5 = R#eeee
+
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO:} #1\textbf{]}}}
+\newcommand{\placeholder}[1]{\textcolor{gray}{\textit{#1}}}
+
+\definecolor{reviewerblue}{HTML}{17A1DE}
+\newcommand{\reviewerone}[1]{\noindent\textcolor{reviewerblue}{\textbf{R\#aaaa~\textit{Q}#1}}}
+
+\definecolor{reviewergreen}{HTML}{549688}
+\newcommand{\reviewertwo}[1]{\noindent\textcolor{reviewergreen}{\textbf{R\#bbbb~\textit{Q}#1}}}
+
+\definecolor{reviewerpurple}{HTML}{7E57C2}
+\newcommand{\reviewerthree}[1]{\noindent\textcolor{reviewerpurple}{\textbf{R\#cccc~\textit{Q}#1}}}
+
+\definecolor{reviewerpink}{HTML}{DB70DB}
+\newcommand{\reviewerfour}[1]{\noindent\textcolor{reviewerpink}{\textbf{R\#dddd~\textit{Q}#1}}}
+
+\definecolor{reviewermaroon}{HTML}{A23E48}
+\newcommand{\reviewerfive}[1]{\noindent\textcolor{reviewermaroon}{\textbf{R\#eeee~\textit{Q}#1}}}
+
+%% Other wonderful colors:
+%% 1F4E79; 4B5DFF; 008C8C; 2E7D32; F28C28; D76A03; D81B60; 4A6274;
+
+% Original title information:
+% \title{Title: Input the paper title here.}
+% \author{Anonymous Author(s)}
+% \affiliation{\institution{Anonymous Institution}\country{}}
+% \acmSubmissionID{No. XX}
+
+% ---------- Change: title information in header ----------
+\newcommand{\RebuttalTitle}{Input the paper title here.}
+\newcommand{\RebuttalShortTitle}{Input the paper title here.}
+\newcommand{\RebuttalID}{No. XX}
+
+\title[\RebuttalShortTitle]{\RebuttalTitle}
+\author{Anonymous Author(s)}
+\affiliation{\institution{Anonymous Institution}\country{}}
+\acmSubmissionID{\RebuttalID}
+
+\makeatletter
+
+% Keep \maketitle for acmart layout initialization,
+% but suppress the printed title/author block.
+\AtBeginMaketitle{%
+  \def\@mktitle{%
+    \global\setbox\mktitle@bx=\vbox{}%
+  }%
+  \def\@mkauthors{}%
+  \def\@mkteasers{}%
+}
+
+% Redefine acmart page styles while preserving review line numbers.
+\AtBeginDocument{%
+  \fancypagestyle{firstpagestyle}{%
+    \fancyhf{}%
+    \renewcommand{\headrulewidth}{0.4pt}%
+    \renewcommand{\footrulewidth}{0pt}%
+    \fancyhead[L]{\ACM@linecountL\@headfootfont\shorttitle}%
+    \fancyhead[R]{\@headfootfont Submission ID: \@acmSubmissionID\ACM@linecountR}%
+    \fancyfoot[C]{\if@ACM@printfolios\footnotesize\thepage\fi}%
+  }%
+  \fancypagestyle{standardpagestyle}{%
+    \fancyhf{}%
+    \renewcommand{\headrulewidth}{0.4pt}%
+    \renewcommand{\footrulewidth}{0pt}%
+    \fancyhead[L]{\ACM@linecountL\@headfootfont\shorttitle}%
+    \fancyhead[R]{\@headfootfont Submission ID: \@acmSubmissionID\ACM@linecountR}%
+    \fancyfoot[C]{\if@ACM@printfolios\footnotesize\thepage\fi}%
+  }%
+  \pagestyle{standardpagestyle}%
+}
+
+\makeatother
+
+\begin{document}
+\maketitle
+
+\noindent
+We thank all reviewers for their constructive comments and valuable suggestions. We are encouraged that the reviewers recognized the importance of \placeholder{the proposed problem / task / setting} and the potential impact of \placeholder{the proposed method}. In this rebuttal, we clarify the main concerns regarding \placeholder{technical novelty, experimental setting, efficiency, limitations, and presentation}.
+
+We will revise the paper to improve clarity and incorporate the reviewers' suggestions in the final version.
+
+\noindent \textcolor{red}{\textbf{[Noticed that the following contents are only the examples, you should replace them with your rebuttals.]}}
+
+\input{reviewers/reviewer1}
+\input{reviewers/reviewer2}
+\input{reviewers/reviewer3}
+\input{reviewers/reviewer4}
+\input{reviewers/reviewer5}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample-base}
+
+\end{document}
